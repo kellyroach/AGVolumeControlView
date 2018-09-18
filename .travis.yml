@@ -2,7 +2,7 @@
 # * http://www.objc.io/issue-6/travis-ci.html
 # * https://github.com/supermarin/xcpretty#usage
 
-osx_image: xcode8
+osx_image: xcode9.4
 language: swift
 # cache: cocoapods
 # podfile: Example/Podfile
@@ -13,5 +13,5 @@ before_install:
 
 script:
 - set -o pipefail
-- xcodebuild -workspace Example/AGVolumeControlView.xcworkspace -scheme AGVolumeControlView-Example -sdk iphonesimulator10.0 -destination "OS=10.0,name=iPhone 7 Plus" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty -c;
+- xcodebuild -workspace Example/AGVolumeControlView.xcworkspace -scheme AGVolumeControlView-Example -sdk iphonesimulator11.4 -destination "OS=10.13,name=iPhone X" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty -c;
 - pod lib lint --allow-warnings

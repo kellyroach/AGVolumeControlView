@@ -57,7 +57,7 @@ extension ViewController
         button.tintColor = UIColor.init(red: 117.0/255.0, green: 250.0/255.0, blue: 252.0/255.0, alpha: 1.0)
     }
     
-    func valueChanged() {
+    @objc func valueChanged() {
         self.audioPlayer?.volume = Float(self.volumeControl.volumeSliderProgressValue())
     }
     
@@ -97,7 +97,7 @@ extension ViewController
         )
     }
     
-    func levelTimerListener ()
+    @objc func levelTimerListener ()
     {
         self.audioPlayer?.updateMeters()
         var level : CGFloat!
